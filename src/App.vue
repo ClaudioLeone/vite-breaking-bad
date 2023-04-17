@@ -1,20 +1,24 @@
 <script>
   import { store } from "./store";
+  import AppHeader from "./components/AppHeader.vue";
 
   export default {
+    components: {
+      AppHeader
+    },
     data() {
       return {
-        store
+        store,
       }
     }
   }
 </script>
 
 <template>
- <h1 v-for="(greeting, index) in store.greetings" :key="index">{{ greeting }}</h1>
+  <AppHeader />
 </template>
 
-<style scoped lang="scss">
-@use "./style.scss" as *;
+<style lang="scss">
+@use "./style.scss";
 
 </style>
